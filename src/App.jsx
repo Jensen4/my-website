@@ -1,31 +1,20 @@
-// import Button from "./components/Button";
-// import Alert from "./components/Alert";
-import NavBar from "./components/NavBar";
-import About from "./components/About";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
 import React, { useState } from "react";
 
 function App() {
   // const [alertVisible, setAlertVisibility] = useState(false);
 
   return (
-    <div>
-      {/* {alertVisible && (
-        <Alert
-          text="This is an alert"
-          onClose={() => {
-            setAlertVisibility(false);
-          }}
-        />
-      )}
-      <Button
-        name="test"
-        onClick={() => {
-          setAlertVisibility(true);
-        }}
-      /> */}
-      <NavBar />
-      <About />
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />}/>
+          <Route path="*" element={<NotFound />}/>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
