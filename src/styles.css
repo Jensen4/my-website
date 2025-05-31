@@ -1,13 +1,23 @@
 @import "tailwindcss";
 
-@theme {
-    --color-background: 
-    --color-foreground: 
-    
-    --color-primary: 
+@theme {    
+    --color-primary: #7338AC;
+    --color-secondary: #635AD9;
+    --color-third: #219BE4;
+    --color-fourth: #88F4FF;
 
     --animate-float: float 6s ease-in-out infinite;
-    --animate-fade-in: fade-in 0.7s ease-out forwards;
+    --animate-fade-in: fade-in 1s ease-out forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    } 100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 @utility container {
