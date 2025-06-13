@@ -40,3 +40,15 @@
         max-width: 1400px;
     }
 }
+
+@utility transition-scale-hover {
+    @apply transition duration-500 hover:scale-105;
+}
+
+@utility transition-scale-hover-2 {
+    @apply transition duration-500 hover:scale-110;
+}
+
+html {
+  scroll-behavior: smooth;
+}

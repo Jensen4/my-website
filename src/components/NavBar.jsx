@@ -14,9 +14,8 @@ const navList = [
 function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-
-  return (
-    <div className="flex md:items-center justify-between mx-10 mt-5">
+    return (
+    <nav className="flex md:items-center justify-between mx-10 mt-5">
         <a className="cursor-pointer" href="#">
         <span className="">
             Jensen Sung
@@ -48,8 +47,8 @@ function NavBar() {
             ))}
             </div>
         </div>
-    </div>
-  );
+    </nav>
+    );
 }
 
 export default NavBar;
